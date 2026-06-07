@@ -1,0 +1,46 @@
+{
+    "project": "InnoMoov",
+    "solution": "Maintenance prédictive par prédiction de RUL",
+    "dataset": "FD001",
+    "best_model_name": "GRU",
+    "sequence_length": 30,
+    "rul_max": 125,
+    "feature_cols": [
+        "setting_1",
+        "setting_2",
+        "setting_3",
+        "sensor_2",
+        "sensor_3",
+        "sensor_4",
+        "sensor_7",
+        "sensor_8",
+        "sensor_9",
+        "sensor_11",
+        "sensor_12",
+        "sensor_13",
+        "sensor_14",
+        "sensor_15",
+        "sensor_17",
+        "sensor_20",
+        "sensor_21"
+    ],
+    "drop_sensors": [
+        "sensor_1",
+        "sensor_5",
+        "sensor_6",
+        "sensor_10",
+        "sensor_16",
+        "sensor_18",
+        "sensor_19"
+    ],
+    "metrics": {
+        "mae": 10.016430854797363,
+        "rmse": 12.907954733812645,
+        "r2": 0.9044291973114014
+    },
+    "decision_thresholds": {
+        "faible": "RUL > 60",
+        "modere": "30 < RUL <= 60",
+        "eleve": "RUL <= 30"
+    }
+}
